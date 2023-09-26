@@ -9,8 +9,8 @@ app.use(express.json());
 dotenv.config();
 const path = require("path");
 app.use("/api/user", userRoutes);
-
-app.listen(5000, () => {
+const PORT= process.env.PORT || 5000;
+app.listen(PORT, () => {
   console.log("server started on port 5000");
 });
 
